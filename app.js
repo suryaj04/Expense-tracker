@@ -1,3 +1,5 @@
+import Chart from 'chart.js/auto';
+
 const ctx = document.getElementById('spendingChart');
 const centerTextPlugin = {
     id: 'centerText',
