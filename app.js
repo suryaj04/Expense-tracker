@@ -76,3 +76,28 @@ new Chart(ctx, {
     },
      plugins:[centerTextPlugin]
 });
+
+
+// menu open/close
+
+let menuButtons = document.querySelector('#menuButtons')
+let menuOpen = document.querySelector('#menuOpen')
+let menuClose = document.querySelector('#menuClose')
+let navigationList = document.querySelector('#navigationList')
+let profileCard = document.querySelector('#profileCard')
+
+menuButtons.addEventListener('click',(e)=>{
+    let clickedButton = e.target.dataset.action
+    if(clickedButton=='menu-open'){
+        navigationList.classList.remove('hidden')
+        profileCard.classList.remove('hidden')
+        menuOpen.classList.add('hidden')
+        menuClose.classList.remove('hidden')
+    }
+    if(clickedButton == 'menu-close'){
+        navigationList.classList.add('hidden')
+        profileCard.classList.add('hidden')
+        menuClose.classList.add('hidden')
+        menuOpen.classList.remove('hidden')
+    }
+})
