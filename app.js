@@ -17,21 +17,13 @@ const centerTextPlugin = {
 
         ctx.save();
 
-        // "Total Spending"
-        ctx.font = '500 14px Poppins';
-        ctx.fillStyle = '#6B7280';
-        ctx.textAlign = 'center';
-        ctx.textBaseline = 'middle';
-
-        ctx.fillText('Total Spending', centerX, centerY - 14);
-
         // Amount
-        ctx.font = '600 20px Poppins';
+        ctx.font = '600 14px Poppins';
         ctx.fillStyle = '#111827';
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
 
-        ctx.fillText('$3,260.00', centerX, centerY +14);
+        ctx.fillText('$3,260.00', centerX, centerY + 6);
 
         ctx.restore();
     }
@@ -85,16 +77,21 @@ let menuOpen = document.querySelector('#menuOpen')
 let menuClose = document.querySelector('#menuClose')
 let navigationList = document.querySelector('#navigationList')
 let profileCard = document.querySelector('#profileCard')
+let aside = document.querySelector('aside')
 
 menuButtons.addEventListener('click',(e)=>{
     let clickedButton = e.target.dataset.action
     if(clickedButton=='menu-open'){
+        aside.classList.remove('lg:h-screen')
+        aside.classList.add('h-screen')
         navigationList.classList.remove('hidden')
         profileCard.classList.remove('hidden')
         menuOpen.classList.add('hidden')
         menuClose.classList.remove('hidden')
     }
     if(clickedButton == 'menu-close'){
+        aside.classList.remove('h-screen')
+        aside.classList.add('lg:h-screen')
         navigationList.classList.add('hidden')
         profileCard.classList.add('hidden')
         menuClose.classList.add('hidden')
