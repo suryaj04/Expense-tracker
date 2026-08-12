@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+
+.poppins{
+   font-family: "Poppins", sans-serif; 
+}
+
+.inter{
+  font-family: "Inter", sans-serif;
+}

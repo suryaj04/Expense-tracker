@@ -1,5 +1,6 @@
-import Chart from 'chart.js/auto';
-
+import Chart from "chart.js/auto";
+import { database } from "./firebase.js";
+ console.log(database)
 const ctx = document.getElementById('spendingChart');
 const centerTextPlugin = {
     id: 'centerText',
