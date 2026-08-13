@@ -67,12 +67,6 @@ new Chart(ctx, {
     },
      plugins:[centerTextPlugin]
 });
-
-
-let test = document.getElementById('test')
-test.addEventListener('click',()=>{
-console.log('hello')
-})
 // menu open/close
 
 let menuButtons = document.querySelector('#menuButtons')
