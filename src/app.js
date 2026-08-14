@@ -81,7 +81,7 @@ menuButtons.addEventListener('click',(e)=>{
     if(clickedButton=='menu-open'){
         document.body.classList.add('overflow-hidden')
         aside.classList.remove('lg:h-screen')
-        aside.classList.add('h-screen')
+        aside.classList.add('h-dvh')
         navigationList.classList.remove('hidden')
         profileCard.classList.remove('hidden')
         menuOpen.classList.add('hidden')
@@ -89,7 +89,7 @@ menuButtons.addEventListener('click',(e)=>{
     }
     if(clickedButton == 'menu-close'){
          document.body.classList.remove('overflow-hidden')
-        aside.classList.remove('h-screen')
+        aside.classList.remove('h-dvh')
         aside.classList.add('lg:h-screen')
         navigationList.classList.add('hidden')
         profileCard.classList.add('hidden')
