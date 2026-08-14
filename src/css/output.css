@@ -292,6 +292,21 @@
   .h-64 {
     height: calc(var(--spacing) * 64);
   }
+  .h-\[calc\(100dvh-\)\] {
+    height: calc(100dvh - );
+  }
+  .h-\[calc\(100dvh-3\.5rem\)\] {
+    height: calc(100dvh - 3.5rem);
+  }
+  .h-\[calc\(100dvh-120px\)\] {
+    height: calc(100dvh - 120px);
+  }
+  .h-\[calc\(100dvh_-3\.5rem\)\] {
+    height: calc(100dvh - 3.5rem);
+  }
+  .h-\[calc\(100dvh_-_3\.5rem\)\] {
+    height: calc(100dvh - 3.5rem);
+  }
   .h-dvh {
     height: 100dvh;
   }
