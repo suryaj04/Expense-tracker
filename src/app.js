@@ -79,6 +79,7 @@ let aside = document.querySelector('aside')
 menuButtons.addEventListener('click',(e)=>{
     let clickedButton = e.target.dataset.action
     if(clickedButton=='menu-open'){
+        document.body.classList.add('overflow-hidden')
         aside.classList.remove('lg:h-screen')
         aside.classList.add('h-screen')
         navigationList.classList.remove('hidden')
@@ -87,6 +88,7 @@ menuButtons.addEventListener('click',(e)=>{
         menuClose.classList.remove('hidden')
     }
     if(clickedButton == 'menu-close'){
+         document.body.classList.remove('overflow-hidden')
         aside.classList.remove('h-screen')
         aside.classList.add('lg:h-screen')
         navigationList.classList.add('hidden')
