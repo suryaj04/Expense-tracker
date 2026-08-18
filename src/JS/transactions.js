@@ -4,6 +4,11 @@ let menuClose = document.querySelector('#menuClose')
 let navigationList = document.querySelector('#navigationList')
 let profileCard = document.querySelector('#profileCard')
 let aside = document.querySelector('aside')
+let addTransaction = document.querySelector('#add-transaction')
+let transactionInput = document.querySelector('#transaction-input')
+let transactionPage = document.querySelector('#transaction-page')
+let cancelTransaction = document.querySelector('#cancel-transaction')
+
 
 menuButtons.addEventListener('click',(e)=>{
     let clickedButton = e.target.dataset.action
@@ -25,4 +30,15 @@ menuButtons.addEventListener('click',(e)=>{
         menuClose.classList.add('hidden')
         menuOpen.classList.remove('hidden')
     }
+})
+
+addTransaction.addEventListener('click',()=>{
+    transactionInput.classList.remove('hidden')
+    transactionPage.classList.add('hidden')
+})
+
+cancelTransaction.addEventListener('click',(e)=>{
+    e.preventDefault()
+    transactionInput.classList.add('hidden')
+    transactionPage.classList.remove('hidden')
 })

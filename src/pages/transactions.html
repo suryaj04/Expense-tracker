@@ -19,7 +19,8 @@
 </head>
 
 <body class="md:flex bg-[#F6F7FB]">
-    <aside class="lg:w-64 w-full md:w-fit md:h-dvh bg-white flex flex-col justify-between border border-[#E5E7EB] rounded-md">
+    <aside
+        class="lg:w-64 w-full md:w-fit md:h-dvh bg-white flex flex-col justify-between border border-[#E5E7EB] rounded-md">
         <section>
             <!-- logo section desktop -->
             <section class="md:flex hidden items-center p-6 gap-2 text-indigo-600 border-b border-[#E5E7EB]">
@@ -28,7 +29,7 @@
                         d="M14 2.5 C14.4 2.5 14.8 2.65 15.1 2.95 L25.05 12.9 C25.65 13.5 25.65 14.5 25.05 15.1 L15.1 25.05 C14.5 25.65 13.5 25.65 12.9 25.05 L2.95 15.1 C2.35 14.5 2.35 13.5 2.95 12.9 L12.9 2.95 C13.2 2.65 13.6 2.5 14 2.5Z"
                         stroke="currentcolor" stroke-width="4" stroke-linejoin="round" />
                 </svg>
-                <h1 class="md:hidden lg:block poppins-bold text-2xl/tight">Spendly</h1>
+                <h1 class="md:hidden lg:block poppins font-bold text-2xl/tight">Spendly</h1>
             </section>
             <!-- mobile logo section -->
             <section class="md:hidden flex justify-between border-b border-[#E5E7EB] items-center px-2 py-4">
@@ -61,7 +62,7 @@
             <!-- navigation -->
             <nav class="fixed md:static hidden top-30 translate-x-1/2 md:translate-0 md:block md:w-fit lg:w-full"
                 id="navigationList">
-                <div class="mt-8 space-y-2">
+                <div class="md:px-6 md:mt-8 space-y-2">
                     <a href="/index.html"
                         class="flex px-3 gap-3 items-center w-full h-11 active:bg-indigo-100 hover:bg-[#F3F4F6] rounded-md hover:text-[#374151] transition-all font-medium text-[#6B7280] active:text-indigo-600 active:font-semibold">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" stroke-width="0.5"
@@ -129,8 +130,82 @@
         </section>
     </aside>
 
+    <!-- transaction input -->
+    <section class="flex-1 py-3 md:pt-10 md:px-5 px-2.5 hidden poppins" id="transaction-input">
+        <header>
+            <div class="text-center md:text-start">
+                <h1 class="text-2xl font-semibold text-[#111827]">Add Transaction</h1>
+                <p class="text-[#6B7280] text-sm">Fill in the details below to add a new transaction.</p>
+            </div>
+        </header>
+        <form action="" class="bg-white border border-[#E5E7EB] rounded-xl p-6 w-full max-w-[720px] my-4 space-y-2">
+            <div>
+                <label for="transaction-title" class="transaction-label">Transaction Title</label>
+                <input placeholder="e.g. Salary from Blinkit" type="text" id="transaction-title"
+                    class="transaction-input">
+            </div>
+            <div class="md:flex gap-4 space-y-2 md:space-y-0 items-center">
+                <div class="flex-1">
+                    <label for="transaction-amount" class="transaction-label">Amount</label>
+                    <input type="number" id="transaction-amount" class="transaction-input" placeholder="0.00">
+                </div>
+                <div class="flex-1">
+                    <label for="transaction-date" class="transaction-label">Date</label>
+                    <input type="date" id="transaction-amount" class="transaction-input">
+                </div>
+            </div>
+            <div class="md:flex gap-4 items-center space-y-2 md:space-y-0">
+                <div class="flex-1">
+                    <label for="transaction-type" class="transaction-label">Type</label>
+                    <select name="" id="transaction-type" class="transaction-input">
+                        <option value="select category">select category</option>
+                        <option value="income">Income</option>
+                        <option value="expense">Expense</option>
+                        <option value="savings">Savings</option>
+                    </select>
+                </div>
+                <div class="flex-1">
+                    <label for="transaction-category" class="transaction-label">Category</label>
+                    <select name="" id="transaction-category" class="transaction-input">
+                        <option value="select category">select category</option>
+                        <option value="food">Food</option>
+                        <option value="groceries">Groceries</option>
+                        <option value="transportation">Transportation</option>
+                        <option value="shopping">Shopping</option>
+                        <option value="bills">Bills</option>
+                        <option value="entertainment">Entertainment</option>
+                        <option value="health & medical">Health & Medical</option>
+                        <option value="education">Education</option>
+                        <option value="personal care">Personal Care</option>
+                        <option value="travel">Travel</option>
+                        <option value="subscriptions">Subscriptions</option>
+                        <option value="rent & housing">Rent & Housing</option>
+                        <option value="gifts & donations">Gifts & Donations</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <label for="transaction-status" class="transaction-label">Status</label>
+                <select name="" id="transaction-status" class="transaction-input">
+                    <option value="select status">Select status</option>
+                    <option value="completed">Completed</option>
+                    <option value="pending">Pending</option>
+                    <option value="cancelled">Cancelled</option>
+                </select>
+            </div>
+            <div>
+                <label for="transaction-description" class="transaction-label">Description / Notes (Optional)</label>
+                <textarea name="" id="" class=""></textarea>
+            </div>
+            <div class="flex items-center gap-3 justify-end">
+                <button class="h-11 px-4 hover:bg-[#F9FAFB] border border-[#E5E7EB] rounded-lg text-sm font-medium text-[#374151]" id="cancel-transaction">Cancel</button>
+                <button class="h-11 px-4 bg-[#4F46E5] hover:bg-[#4338CA] rounded-lg text-white text-sm font-medium">Add Transaction</button>
+            </div>
+        </form>
+    </section>
     <!-- main section -->
-    <main class="flex-1 py-3 md:pt-10 md:px-5 px-2.5  poppins">
+    <main class="flex-1 py-3 md:pt-10 md:px-5 px-2.5  poppins" id="transaction-page">
         <header class="flex justify-between items-center w-full">
             <div class="hidden md:block">
                 <h1 class="text-3xl/tight font-semibold text-[#111827]">Transactions</h1>
@@ -155,7 +230,7 @@
                         </svg></span> Filters</button>
                 <button
                     class="h-11 px-5 bg-[#4F46E5] justify-center md:justify-start hover:bg-[#4338CA] rounded-lg text-white text-sm font-medium flex gap-2 items-center w-full md:w-fit"
-                    id="test"><span><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="white"
+                    id="add-transaction"><span><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="white"
                             class="bi bi-plus-lg" viewBox="0 0 16 16">
                             <path fill-rule="evenodd"
                                 d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2" />
