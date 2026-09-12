@@ -19,8 +19,38 @@
 </head>
 
 <body class="md:flex bg-[#F6F7FB]">
+    <!-- mobile logo section -->
+    <section
+        class="md:hidden sticky top-0 z-50 bg-white flex justify-between border-b border-[#E5E7EB] items-center px-2 py-2">
+        <div id="menuButtons">
+            <!-- menu open -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" id="menuOpen" data-action="menu-open" height="20"
+                fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+            </svg>
+            <!-- menu close -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" id="menuClose" data-action="menu-close"
+                fill="currentColor" class="bi bi-x-lg hidden" viewBox="0 0 16 16">
+                <path
+                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+            </svg>
+        </div>
+        <h1 class="poppins font-bold text-xl/[24px] text-indigo-600">Transactions</h1>
+        <div class="bg-white p-1 border-[#E5E7EB] border rounded-lg">
+            <div class="relative p-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bell"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4 4 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4 4 0 0 0-3.203-3.92zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5 5 0 0 1 13 6c0 .88.32 4.2 1.22 6" />
+                </svg>
+                <div class="w-2 h-2 rounded-full bg-[#EF4444] absolute top-0 right-0"></div>
+            </div>
+        </div>
+    </section>
+    <!-- Sidebar -->
     <aside
-        class="lg:w-64 w-full md:w-fit md:h-dvh bg-white flex flex-col justify-between border border-[#E5E7EB] rounded-md">
+        class="lg:w-64 w-full md:fixed md:w-fit md:h-dvh flex flex-col justify-between items-center bg-white border border-[#E5E7EB] rounded-md">
         <section>
             <!-- logo section desktop -->
             <section class="md:flex hidden items-center p-6 gap-2 text-indigo-600 border-b border-[#E5E7EB]">
@@ -31,37 +61,9 @@
                 </svg>
                 <h1 class="md:hidden lg:block poppins font-bold text-2xl/tight">Spendly</h1>
             </section>
-            <!-- mobile logo section -->
-            <section class="md:hidden flex justify-between border-b border-[#E5E7EB] items-center px-2 py-4">
-                <div id="menuButtons">
-                    <!-- menu open -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" id="menuOpen" data-action="menu-open" height="20"
-                        fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd"
-                            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
-                    </svg>
-                    <!-- menu close -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" id="menuClose"
-                        data-action="menu-close" fill="currentColor" class="bi bi-x-lg hidden" viewBox="0 0 16 16">
-                        <path
-                            d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
-                    </svg>
-                </div>
-                <h1 class="poppins font-bold text-xl/[24px] text-indigo-600">Transaction</h1>
-                <div class="bg-white p-1 border-[#E5E7EB] border rounded-lg">
-                    <div class="relative p-1">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                            class="bi bi-bell" viewBox="0 0 16 16">
-                            <path
-                                d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4 4 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4 4 0 0 0-3.203-3.92zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5 5 0 0 1 13 6c0 .88.32 4.2 1.22 6" />
-                        </svg>
-                        <div class="w-2 h-2 rounded-full bg-[#EF4444] absolute top-0 right-0"></div>
-                    </div>
-                </div>
-            </section>
+
             <!-- navigation -->
-            <nav class="fixed md:static hidden top-30 translate-x-1/2 md:translate-0 md:block md:w-fit lg:w-full"
-                id="navigationList">
+            <nav class="hidden bg-white md:block mt-32 md:w-fit lg:w-full" id="navigationList">
                 <div class="md:px-6 md:mt-8 space-y-2">
                     <a href="/index.html"
                         class="flex px-3 gap-3 items-center w-full h-11 active:bg-indigo-100 hover:bg-[#F3F4F6] rounded-md hover:text-[#374151] transition-all font-medium text-[#6B7280] active:text-indigo-600 active:font-semibold">
@@ -72,34 +74,34 @@
                         </svg>
                         <span class="poppins md:hidden lg:block">Dashboard</span>
                     </a>
-                    <div
-                        class="flex px-3 gap-3 items-center w-full h-11 active:bg-indigo-100 hover:bg-[#F3F4F6] rounded-md hover:text-[#374151] font-medium transition-all text-[#6B7280] active:text-indigo-600 active:font-semibold">
+                    <a href="./transactions.html"
+                        class="flex px-3 gap-3 items-center w-full h-11 bg-indigo-100 hover:bg-[#F3F4F6] rounded-md hover:text-[#374151] transition-all text-indigo-600 font-semibold">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentcolor"
                             stroke-width="0.5" stroke="currentcolor" class="bi bi-currency-dollar" viewBox="0 0 16 16">
                             <path
                                 d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73z" />
                         </svg>
-                        <a href="#" class="poppins md:hidden lg:block">Transactions</a>
-                    </div>
-                    <div
+                        <span class="poppins md:hidden lg:block">Transactions</span>
+                    </a>
+                    <a href="./budgets.html"
                         class="flex px-3 gap-3 items-center w-full h-11 active:bg-indigo-100 hover:bg-[#F3F4F6] rounded-md hover:text-[#374151] font-medium transition-all text-[#6B7280] active:text-indigo-600 active:font-semibold">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentcolor"
                             stroke-width="0.5" stroke="currentcolor" class="bi bi-wallet" viewBox="0 0 16 16">
                             <path
                                 d="M0 3a2 2 0 0 1 2-2h13.5a.5.5 0 0 1 0 1H15v2a1 1 0 0 1 1 1v8.5a1.5 1.5 0 0 1-1.5 1.5h-12A2.5 2.5 0 0 1 0 12.5zm1 1.732V12.5A1.5 1.5 0 0 0 2.5 14h12a.5.5 0 0 0 .5-.5V5H2a2 2 0 0 1-1-.268M1 3a1 1 0 0 0 1 1h12V2H2a1 1 0 0 0-1 1" />
                         </svg>
-                        <span class="poppins  md:hidden lg:block">Budgets</span>
-                    </div>
-                    <div
+                        <span class="poppins md:hidden lg:block">Budgets</span>
+                    </a>
+                    <a href="./analytics.html"
                         class="flex px-3 gap-3 items-center w-full h-11 active:bg-indigo-100 rounded-md hover:bg-[#F3F4F6] hover:text-[#374151] font-medium transition-all text-[#6B7280] active:text-indigo-600 active:font-semibold">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentcolor"
                             stroke-width="0.5" stroke="currentcolor" class="bi bi-graph-up-arrow" viewBox="0 0 16 16">
                             <path fill-rule="evenodd"
                                 d="M0 0h1v15h15v1H0zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5" />
                         </svg>
-                        <span class="poppins  md:hidden lg:block">Analytics</span>
-                    </div>
-                    <div
+                        <span class="poppins md:hidden lg:block">Analytics</span>
+                    </a>
+                    <a href="./settings.html"
                         class="flex px-3 gap-3 items-center w-full h-11 rounded-md active:bg-indigo-100 hover:bg-[#F3F4F6] hover:text-[#374151] font-medium transition-all text-[#6B7280] active:text-indigo-600 active:font-semibold">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentcolor"
                             stroke-width="0.5" stroke="currentcolor" class="bi bi-gear" viewBox="0 0 16 16">
@@ -109,14 +111,14 @@
                                 d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z" />
                         </svg>
                         <span class="poppins  md:hidden lg:block">Settings</span>
-                    </div>
+                    </a>
                 </div>
             </nav>
         </section>
         <!-- profile section -->
-        <section id="profileCard" class="p-2 hidden md:block">
+        <section id="profileCard" class="p-2 md:block w-full hidden">
             <div class="border border-[#E5E7EB] rounded-md">
-                <div class="px-4 py-4 flex gap-2 items-center">
+                <div class="p-4 flex gap-2 items-center">
                     <div class="w-14 h-14 rounded-full ">
                         <img src="../images/profile avatar 2.avif"
                             class="w-full h-full overflow-hidden object-cover object-center" alt="">
@@ -169,6 +171,7 @@
                     <select name="" id="transaction-category" class="transaction-input">
                         <option value="select category">select category</option>
                         <option value="food">Food</option>
+                        <option value="salary">Salary</option>
                         <option value="groceries">Groceries</option>
                         <option value="transportation">Transportation</option>
                         <option value="shopping">Shopping</option>
@@ -199,8 +202,11 @@
                 <textarea name="" id="" class=""></textarea>
             </div>
             <div class="flex items-center gap-3 justify-end">
-                <button class="h-11 px-4 hover:bg-[#F9FAFB] border border-[#E5E7EB] rounded-lg text-sm font-medium text-[#374151]" id="cancel-transaction">Cancel</button>
-                <button class="h-11 px-4 bg-[#4F46E5] hover:bg-[#4338CA] rounded-lg text-white text-sm font-medium">Add Transaction</button>
+                <button
+                    class="h-11 px-4 hover:bg-[#F9FAFB] border border-[#E5E7EB] rounded-lg text-sm font-medium text-[#374151]"
+                    id="cancel-transaction">Cancel</button>
+                <button class="h-11 px-4 bg-[#4F46E5] hover:bg-[#4338CA] rounded-lg text-white text-sm font-medium">Add
+                    Transaction</button>
             </div>
         </form>
     </section>
@@ -230,8 +236,8 @@
                         </svg></span> Filters</button>
                 <button
                     class="h-11 px-5 bg-[#4F46E5] justify-center md:justify-start hover:bg-[#4338CA] rounded-lg text-white text-sm font-medium flex gap-2 items-center w-full md:w-fit"
-                    id="add-transaction"><span><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="white"
-                            class="bi bi-plus-lg" viewBox="0 0 16 16">
+                    id="add-transaction"><span><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            fill="white" class="bi bi-plus-lg" viewBox="0 0 16 16">
                             <path fill-rule="evenodd"
                                 d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2" />
                         </svg></span>Add Transaction</button>

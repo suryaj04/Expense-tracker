@@ -4,11 +4,13 @@ let menuClose = document.querySelector('#menuClose')
 let navigationList = document.querySelector('#navigationList')
 let profileCard = document.querySelector('#profileCard')
 let aside = document.querySelector('aside')
-let addTransaction = document.querySelector('#add-transaction')
-let transactionInput = document.querySelector('#transaction-input')
-let transactionPage = document.querySelector('#transaction-page')
-let cancelTransaction = document.querySelector('#cancel-transaction')
-
+let closeSettings = document.querySelector('#closeSettings')
+let settingsForm = document.querySelector('#settingsForm')
+let openSettingsForm = document.querySelector('#openSettingsForm')
+let preferences = document.querySelector('#preferences')
+let profile = document.querySelector('#profile')
+let profilePage = document.querySelector('#profilePage')
+let preferencesPage = document.querySelector('#preferencesPage')
 
 menuButtons.addEventListener('click',(e)=>{
     let clickedButton = e.target.dataset.action
@@ -30,13 +32,22 @@ menuButtons.addEventListener('click',(e)=>{
     }
 })
 
-addTransaction.addEventListener('click',()=>{
-    transactionInput.classList.remove('hidden')
-    transactionPage.classList.add('hidden')
+openSettingsForm.addEventListener('click',()=>{
+    settingsForm.classList.remove('hidden')
 })
 
-cancelTransaction.addEventListener('click',(e)=>{
-    e.preventDefault()
-    transactionInput.classList.add('hidden')
-    transactionPage.classList.remove('hidden')
+closeSettings.addEventListener('click', ()=>{
+    settingsForm.classList.add('hidden')
+})
+
+profile.addEventListener('click',()=>{
+    preferencesPage.classList.add('hidden')
+    profilePage.classList.remove('hidden')
+
+})
+
+preferences.addEventListener('click',()=>{
+    console.log('yes')
+    profilePage.classList.add('hidden')
+    preferencesPage.classList.remove('hidden')
 })

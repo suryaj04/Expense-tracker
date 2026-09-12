@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/output.css">
+</head>
+
+<body class="bg-[#F6F7FB] md:flex">
+    <!-- mobile logo section -->
+    <section
+        class="md:hidden sticky top-0 z-50 bg-white flex justify-between border-b border-[#E5E7EB] items-center px-2 py-2">
+        <div id="menuButtons">
+            <!-- menu open -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" id="menuOpen" data-action="menu-open" height="20"
+                fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+            </svg>
+            <!-- menu close -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" id="menuClose" data-action="menu-close"
+                fill="currentColor" class="bi bi-x-lg hidden" viewBox="0 0 16 16">
+                <path
+                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+            </svg>
+        </div>
+        <h1 class="poppins font-bold text-xl/[24px] text-indigo-600">Settings</h1>
+        <div class="bg-white p-1 border-[#E5E7EB] border rounded-lg">
+            <div class="relative p-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bell"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4 4 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4 4 0 0 0-3.203-3.92zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5 5 0 0 1 13 6c0 .88.32 4.2 1.22 6" />
+                </svg>
+                <div class="w-2 h-2 rounded-full bg-[#EF4444] absolute top-0 right-0"></div>
+            </div>
+        </div>
+    </section>
+    <!-- Sidebar -->
+    <aside
+        class="lg:w-64 w-full md:fixed md:w-fit md:h-dvh flex flex-col justify-between items-center bg-white border border-[#E5E7EB] rounded-md">
+        <section>
+            <!-- logo section desktop -->
+            <section class="md:flex hidden items-center p-6 gap-2 text-indigo-600 border-b border-[#E5E7EB]">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M14 2.5 C14.4 2.5 14.8 2.65 15.1 2.95 L25.05 12.9 C25.65 13.5 25.65 14.5 25.05 15.1 L15.1 25.05 C14.5 25.65 13.5 25.65 12.9 25.05 L2.95 15.1 C2.35 14.5 2.35 13.5 2.95 12.9 L12.9 2.95 C13.2 2.65 13.6 2.5 14 2.5Z"
+                        stroke="currentcolor" stroke-width="4" stroke-linejoin="round" />
+                </svg>
+                <h1 class="md:hidden lg:block poppins font-bold text-2xl/tight">Spendly</h1>
+            </section>
+
+            <!-- navigation -->
+            <nav class="hidden bg-white md:block mt-32 md:w-fit lg:w-full" id="navigationList">
+                <div class="md:px-6 md:mt-8 space-y-2">
+                    <a href="/index.html"
+                        class="flex px-3 gap-3 items-center w-full h-11 active:bg-indigo-100 hover:bg-[#F3F4F6] rounded-md hover:text-[#374151] transition-all font-medium text-[#6B7280] active:text-indigo-600 active:font-semibold">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" stroke-width="0.5"
+                            stroke="currentcolor" fill="currentcolor" class="bi bi-house" viewBox="0 0 16 16">
+                            <path
+                                d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
+                        </svg>
+                        <span class="poppins md:hidden lg:block">Dashboard</span>
+                    </a>
+                    <a href="./transactions.html"
+                        class="flex px-3 gap-3 items-center w-full h-11 active:bg-indigo-100 hover:bg-[#F3F4F6] rounded-md hover:text-[#374151] font-medium transition-all text-[#6B7280] active:text-indigo-600 active:font-semibold">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentcolor"
+                            stroke-width="0.5" stroke="currentcolor" class="bi bi-currency-dollar" viewBox="0 0 16 16">
+                            <path
+                                d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73z" />
+                        </svg>
+                        <span class="poppins md:hidden lg:block">Transactions</span>
+                    </a>
+                    <a href="./budgets.html"
+                        class="flex px-3 gap-3 items-center w-full h-11 active:bg-indigo-100 hover:bg-[#F3F4F6] rounded-md hover:text-[#374151] font-medium transition-all text-[#6B7280] active:text-indigo-600 active:font-semibold">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentcolor"
+                            stroke-width="0.5" stroke="currentcolor" class="bi bi-wallet" viewBox="0 0 16 16">
+                            <path
+                                d="M0 3a2 2 0 0 1 2-2h13.5a.5.5 0 0 1 0 1H15v2a1 1 0 0 1 1 1v8.5a1.5 1.5 0 0 1-1.5 1.5h-12A2.5 2.5 0 0 1 0 12.5zm1 1.732V12.5A1.5 1.5 0 0 0 2.5 14h12a.5.5 0 0 0 .5-.5V5H2a2 2 0 0 1-1-.268M1 3a1 1 0 0 0 1 1h12V2H2a1 1 0 0 0-1 1" />
+                        </svg>
+                        <span class="poppins md:hidden lg:block">Budgets</span>
+                    </a>
+                    <a href="./analytics.html"
+                        class="flex px-3 gap-3 items-center w-full h-11 active:bg-indigo-100 rounded-md hover:bg-[#F3F4F6] hover:text-[#374151] font-medium transition-all text-[#6B7280] active:text-indigo-600 active:font-semibold">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentcolor"
+                            stroke-width="0.5" stroke="currentcolor" class="bi bi-graph-up-arrow" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M0 0h1v15h15v1H0zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5" />
+                        </svg>
+                        <span class="poppins md:hidden lg:block">Analytics</span>
+                    </a>
+                    <a href="./settings.html"
+                        class="flex px-3 gap-3 items-center w-full h-11 rounded-md bg-indigo-100 hover:bg-[#F3F4F6] hover:text-[#374151] transition-all text-indigo-600 font-semibold">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentcolor"
+                            stroke-width="0.5" stroke="currentcolor" class="bi bi-gear" viewBox="0 0 16 16">
+                            <path
+                                d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0" />
+                            <path
+                                d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z" />
+                        </svg>
+                        <span class="poppins  md:hidden lg:block">Settings</span>
+                    </a>
+                </div>
+            </nav>
+        </section>
+        <!-- profile section -->
+        <section id="profileCard" class="p-2 md:block w-full hidden">
+            <div class="border border-[#E5E7EB] rounded-md">
+                <div class="p-4 flex gap-2 items-center">
+                    <div class="w-14 h-14 rounded-full ">
+                        <img src="../images/profile avatar 2.avif"
+                            class="w-full h-full overflow-hidden object-cover object-center" alt="">
+                    </div>
+                    <div class="md:hidden lg:block">
+                        <span class="poppins font-semibold text-[#111827]">Surya</span>
+                        <p class="text-sm text-[#6B7280]">Frontend Developer</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </aside>
+
+
+    <main class="flex-1 py-3 md:py-10 md:px-5 px-2.5 md:ms-28 lg:ms-64 space-y-6">
+        <header class="hidden md:block">
+            <h1 class="inter text-2xl font-bold text-[#111827]">Settings</h1>
+            <p class="inter text-sm text-[#6B7280] mt-1">Manage your account and preferences</p>
+        </header>
+        <!-- profile page -->
+        <section class="space-y-3 md:space-y-6 " id="profilePage">
+            <!-- settings form -->
+            <section id="settingsForm"
+                class="fixed inset-0 w-dvw h-dvh flex items-center justify-center z-50 p-4 bg-[#11182773] hidden">
+                <div class="md:w-[520px]  bg-white border border-[#E5E7EB] rounded-xl p-6">
+                    <header class="flex justify-between items-center">
+                        <div>
+                            <h1 class="inter text-xl font-semibold text-[#111827]">Edit Profile</h1>
+                            <p class="inter text-[#6B7280]">Update your personal information.</p>
+                        </div>
+                        <div id="closeSettings"
+                            class="h-8 w-8 flex items-center justify-center rounded-md hover:bg-[#F3F4F6] cursor-pointer">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="#111827" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-x">
+                                <path d="M18 6 6 18" />
+                                <path d="m6 6 12 12" />
+                            </svg>
+                        </div>
+                    </header>
+                    <form action="" class="mt-4">
+                        <div class="flex gap-5">
+                            <div class="h-14 w-14 flex items-center justify-center rounded-full bg-[#EEF2FF]">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"
+                                    fill="none" stroke="#4F46E5" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-circle-user">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <circle cx="12" cy="10" r="3" />
+                                    <path d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662" />
+                                </svg>
+                            </div>
+                            <div class="space-y-1">
+                                <label for="profilePhoto"
+                                    class="px-3.5 py-2 rounded-lg border border-[#C7D2FE] bg-white text-[#4F46E5] font-medium block">Change
+                                    Photo</label>
+                                <p class="text-xs text-[#6B7280]">JPG, PNG (Max 2MB)</p>
+                                <input type="file" id="profilePhoto" hidden>
+                            </div>
+                        </div>
+                        <div class="mt-4 space-y-2">
+                            <div>
+                                <label for="fullName" class="block inter font-medium text-[#374151] mb-1.5">Full
+                                    Name</label>
+                                <input type="text" placeholder="Full Name" id="fullName"
+                                    class="w-full h-10 bg-white border border-[#D1D5DB] rounded-lg px-3 inter text-[#111827] outline-none focus:border-[#4F46E5]">
+                            </div>
+                            <div>
+                                <label for="fullName" class="block inter font-medium text-[#374151] mb-1.5">Email
+                                    Address</label>
+                                <input type="email" placeholder="Email Address" id="fullName"
+                                    class="w-full h-10 bg-white border border-[#D1D5DB] rounded-lg px-3 inter text-[#111827] outline-none focus:border-[#4F46E5]">
+                            </div>
+                            <div>
+                                <label for="fullName" class="block inter font-medium text-[#374151] mb-1.5">Phone
+                                    Number</label>
+                                <input type="number" placeholder="Phone Number" id="fullName"
+                                    class="w-full h-10 bg-white border border-[#D1D5DB] rounded-lg px-3 inter text-[#111827] outline-none focus:border-[#4F46E5]">
+                            </div>
+                            <button class="h-10 px-4 bg-[#4F46E5] text-white font-medium cursor-pointer rounded-lg">Save
+                                changes</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <section class="flex flex-col md:flex-row gap-4">
+                <nav class="md:w-60 flex md:block h-fit bg-white border border-[#E5E7EB] rounded-xl p-2">
+                    <div
+                        class="p-3 active:bg-[#EEF2FF] inter font-medium text-[#6B7280] active:text-[#4F46E5] hover:bg-[#F3F4F6] hover:text-[#374151] transition-all">
+                        <button>Profile</button>
+                    </div>
+                    <div
+                        class="p-3 active:bg-[#EEF2FF] inter font-medium text-[#6B7280] active:text-[#4F46E5] hover:bg-[#F3F4F6] hover:text-[#374151] transition-all">
+                        <button id="preferences">Preferences</button>
+                    </div>
+                </nav>
+                <div class="bg-white border border-[#E5E7EB] rounded-xl p-4 lg:p-6 w-full space-y-4">
+                    <div class="flex justify-between flex-col lg:flex-row gap-4 items-start lg:items-center ">
+                        <div class="flex gap-4 items-center">
+                            <div class="h-14 w-14 flex items-center justify-center rounded-full bg-[#EEF2FF]">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                                    fill="none" stroke="#4F46E5" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-circle-user">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <circle cx="12" cy="10" r="3" />
+                                    <path d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h1 class="inter text-lg font-semibold text-[#111827]">Surya</h1>
+                                <p class="inter text-[#6B7280]">Frontend developer</p>
+                            </div>
+                        </div>
+                        <button id="openSettingsForm"
+                            class="px-3.5 py-2 w-full lg:w-fit bg-white border border-[#C7D2FE] rounded-lg text-[#4F46E5] inter font-medium cursor-pointer">Edit
+                            Profile</button>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="lg:flex justify-between border-b border-[#E5E7EB] pb-2 items-center block">
+                            <h1 class="inter font-medium text-[#6B7280]">Full Name</h1>
+                            <p class="inter font-medium text-[#111827]">Surya</p>
+                        </div>
+                        <div class="lg:flex block border-b border-[#E5E7EB] pb-2 justify-between items-center">
+                            <h1 class="inter font-medium text-[#6B7280]">Email Address</h1>
+                            <p class="inter font-medium text-[#111827]">ex@gmail.com</p>
+                        </div>
+                        <div class="lg:flex block border-b border-[#E5E7EB] pb-2 justify-between items-center">
+                            <h1 class="inter font-medium text-[#6B7280]">Phone Number</h1>
+                            <p class="inter font-medium text-[#111827]">+91 1234567890</p>
+                        </div>
+                    </div>
+                    <button
+                        class="bg-white text-[#DC2626] border border-[#FCA5A5] rounded-lg h-10 px-4 font-medium hover:bg-[#FEF2F2] cursor-pointer">Delete
+                        Account</button>
+                </div>
+            </section>
+        </section>
+
+        <!-- preferences -->
+        <section class="flex gap-4 hidden flex-col md:flex-row space-y-3" id="preferencesPage">
+            <nav class="md:w-60 flex md:block h-fit bg-white border border-[#E5E7EB] rounded-xl p-2">
+                <div
+                    class="p-3 active:bg-[#EEF2FF] inter font-medium text-[#6B7280] active:text-[#4F46E5] hover:bg-[#F3F4F6] hover:text-[#374151] transition-all">
+                    <button id="profile">Profile</button>
+                </div>
+                <div
+                    class="p-3 active:bg-[#EEF2FF] inter font-medium text-[#6B7280] active:text-[#4F46E5] hover:bg-[#F3F4F6] hover:text-[#374151] transition-all">
+                    <button>Preferences</button>
+                </div>
+            </nav>
+            <section class="w-full space-y-3">
+                <!-- Theme card -->
+                <section
+                    class="bg-white border border-[#E5E7EB] rounded-xl p-4 block space-y-2 md:flex items-center justify-between">
+                    <div class="flex gap-3 items-center">
+                        <div class="w-10 h-10 rounded-lg bg-[#EEF2FF] flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="#4F46E5" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-moon">
+                                <path
+                                    d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h1 class="inter font-semibold text-[#111827]">Theme</h1>
+                            <p class="text-sm text-[#6B7280]">Choose how Spendly looks.</p>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="h-10 w-full flex border border-[#D1D5DB] rounded-lg">
+                            <div
+                                class=" text-[#374151] px-3.5 flex  items-center justify-center gap-1.5 cursor-pointer active:bg-[#EEF2FF] active:text-[#4F46E5] active:font-semibold">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-sun">
+                                    <circle cx="12" cy="12" r="4" />
+                                    <path d="M12 2v2" />
+                                    <path d="M12 20v2" />
+                                    <path d="m4.93 4.93 1.41 1.41" />
+                                    <path d="m17.66 17.66 1.41 1.41" />
+                                    <path d="M2 12h2" />
+                                    <path d="M20 12h2" />
+                                    <path d="m6.34 17.66-1.41 1.41" />
+                                    <path d="m19.07 4.93-1.41 1.41" />
+                                </svg>
+                                <p class="text-current">Light</p>
+                            </div>
+                            <div
+                                class=" text-[#374151] px-3.5 flex  items-center justify-center gap-1.5 cursor-pointer border-s border-[#E5E7EB] active:bg-[#EEF2FF] active:text-[#4F46E5] active:font-semibold">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-moon">
+                                    <path
+                                        d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" />
+                                </svg>
+                                <p class="text-current">Dark</p>
+                            </div>
+                            <div
+                                class=" text-[#374151] px-3.5 flex  items-center justify-center gap-1.5 cursor-pointer border-s border-[#E5E7EB] active:bg-[#EEF2FF] active:text-[#4F46E5] active:font-semibold">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-monitor">
+                                    <rect width="20" height="14" x="2" y="3" rx="2" />
+                                    <line x1="8" x2="16" y1="21" y2="21" />
+                                    <line x1="12" x2="12" y1="17" y2="21" />
+                                </svg>
+                                <p class="text-current">System</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- dashboard customization -->
+                <section class="bg-white border border-[#E5E7EB] rounded-xl p-4 ">
+                    <header class="flex">
+                        <div class="flex gap-3 md:items-center">
+                            <div class="w-10 h-10 rounded-lg bg-[#EEF2FF] flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="#4F46E5" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-layout-dashboard">
+                                    <rect width="7" height="9" x="3" y="3" rx="1" />
+                                    <rect width="7" height="5" x="14" y="3" rx="1" />
+                                    <rect width="7" height="9" x="14" y="12" rx="1" />
+                                    <rect width="7" height="5" x="3" y="16" rx="1" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h1 class="inter font-semibold text-[#111827]">Dashboard Customization</h1>
+                                <p class="text-sm text-[#6B7280]">Choose what appears on your dashboard.</p>
+                            </div>
+                        </div>
+                    </header>
+                    <div
+                        class="grid grid-cols-1 grid-flow-row lg:grid-cols-2 lg:grid-rows-3 lg:grid-flow-col lg:gap-x-6 inter mt-3 text-[#374151] bg-[#F9FAFB] p-3 rounded-lg font-medium">
+                        <div class="flex items-center justify-between">
+                            <h1>Total Balance</h1>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="22" viewBox="0 0 24 24"
+                                fill="none" stroke="#4F46E5" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-toggle-right cursor-pointer">
+                                <circle cx="15" cy="12" r="3" />
+                                <rect width="20" height="14" x="2" y="5" rx="7" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="#D1D5DB" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-toggle-left hidden cursor-pointer">
+                                <circle cx="9" cy="12" r="3" />
+                                <rect width="20" height="14" x="2" y="5" rx="7" />
+                            </svg>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <h1>Income</h1>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="22" viewBox="0 0 24 24"
+                                fill="none" stroke="#4F46E5" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-toggle-right cursor-pointer">
+                                <circle cx="15" cy="12" r="3" />
+                                <rect width="20" height="14" x="2" y="5" rx="7" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="#D1D5DB" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-toggle-left hidden cursor-pointer">
+                                <circle cx="9" cy="12" r="3" />
+                                <rect width="20" height="14" x="2" y="5" rx="7" />
+                            </svg>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <h1>Expenses</h1>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="22" viewBox="0 0 24 24"
+                                fill="none" stroke="#4F46E5" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-toggle-right cursor-pointer">
+                                <circle cx="15" cy="12" r="3" />
+                                <rect width="20" height="14" x="2" y="5" rx="7" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="#D1D5DB" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-toggle-left hidden cursor-pointer">
+                                <circle cx="9" cy="12" r="3" />
+                                <rect width="20" height="14" x="2" y="5" rx="7" />
+                            </svg>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <h1>Savings</h1>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="22" viewBox="0 0 24 24"
+                                fill="none" stroke="#4F46E5" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-toggle-right cursor-pointer">
+                                <circle cx="15" cy="12" r="3" />
+                                <rect width="20" height="14" x="2" y="5" rx="7" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="#D1D5DB" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-toggle-left hidden cursor-pointer">
+                                <circle cx="9" cy="12" r="3" />
+                                <rect width="20" height="14" x="2" y="5" rx="7" />
+                            </svg>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <h1>Recent Transactions</h1>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="22" viewBox="0 0 24 24"
+                                fill="none" stroke="#4F46E5" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-toggle-right cursor-pointer">
+                                <circle cx="15" cy="12" r="3" />
+                                <rect width="20" height="14" x="2" y="5" rx="7" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="#D1D5DB" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-toggle-left hidden cursor-pointer">
+                                <circle cx="9" cy="12" r="3" />
+                                <rect width="20" height="14" x="2" y="5" rx="7" />
+                            </svg>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <h1>Spending by Category</h1>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="22" viewBox="0 0 24 24"
+                                fill="none" stroke="#4F46E5" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-toggle-right cursor-pointer">
+                                <circle cx="15" cy="12" r="3" />
+                                <rect width="20" height="14" x="2" y="5" rx="7" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="#D1D5DB" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-toggle-left hidden cursor-pointer">
+                                <circle cx="9" cy="12" r="3" />
+                                <rect width="20" height="14" x="2" y="5" rx="7" />
+                            </svg>
+                        </div>
+                    </div>
+
+                </section>
+                <!-- Default landing page -->
+                <section
+                    class="bg-white border border-[#E5E7EB] rounded-xl p-4 block space-y-2 md:flex items-center justify-between">
+                    <header class="flex gap-3 md:items-center">
+                        <div class="w-10 h-10 rounded-lg bg-[#EEF2FF] flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="#4F46E5" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-house">
+                                <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" />
+                                <path
+                                    d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h1 class="inter font-semibold text-[#111827]">Default Landing Page</h1>
+                            <p class="text-sm text-[#6B7280]">Choose which page opens first after you sign in.</p>
+                        </div>
+                    </header>
+                    <select name="" id=""
+                        class="md:w-56 w-full h-10 border border-[#D1D5DB] rounded-lg px-3 inter font-medium text-[#374151] cursor-pointer outline-none focus:border-[#4F46E5]">
+                        <option value="Dashboard">Dashboard</option>
+                        <option value="Transactions">Transactions</option>
+                        <option value="Budgets">Budgets</option>
+                        <option value="Analytics">Analytics</option>
+                    </select>
+                </section>
+                <!-- manage category -->
+                <section class="bg-white border border-[#E5E7EB] rounded-xl p-4">
+                    <header class="md:flex md:items-center justify-between space-y-2">
+                        <div class="flex gap-3 items-center">
+                            <div class="w-10 h-10 rounded-lg bg-[#EEF2FF] flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="#4F46E5" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-tag">
+                                    <path
+                                        d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z" />
+                                    <circle cx="7.5" cy="7.5" r=".5" fill="currentColor" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h1 class="inter font-semibold text-[#111827]">Manage Categories</h1>
+                                <p class="text-sm text-[#6B7280]">Add, edit or remove your categories.</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <button
+                                class="h-9 px-3.5 bg-[#4F46E5] flex items-center rounded-lg inter font-medium text-white cursor-pointer hover:bg-[#4338CA]">
+                                + Add Category
+                            </button>
+                        </div>
+                    </header>
+                    <div class="space-y-2 mt-3">
+                        <div class="flex justify-between">
+                            <div class="flex items-center gap-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="#EF4444" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-utensils">
+                                    <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2" />
+                                    <path d="M7 2v20" />
+                                    <path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7" />
+                                </svg>
+                                <p class="">Food</p>
+                            </div>
+                            <div class="flex items-center gap-3.5">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    fill="none" stroke="#374151" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-square-pen cursor-pointer">
+                                    <path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+                                    <path
+                                        d="M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    fill="none" stroke="#EF4444" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-trash cursor-pointer">
+                                    <path d="M10 11v6" />
+                                    <path d="M14 11v6" />
+                                    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6" />
+                                    <path d="M3 6h18" />
+                                    <path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="flex justify-between">
+                            <div class="flex items-center gap-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-van">
+                                    <path
+                                        d="M13 6v5a1 1 0 0 0 1 1h6.102a1 1 0 0 1 .712.298l.898.91a1 1 0 0 1 .288.702V17a1 1 0 0 1-1 1h-3" />
+                                    <path d="M5 18H3a1 1 0 0 1-1-1V8a2 2 0 0 1 2-2h12c1.1 0 2.1.8 2.4 1.8l1.176 4.2" />
+                                    <path d="M9 18h5" />
+                                    <circle cx="16" cy="18" r="2" />
+                                    <circle cx="7" cy="18" r="2" />
+                                </svg>
+                                <p class="">Transport</p>
+                            </div>
+                            <div class="flex items-center gap-3.5">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    fill="none" stroke="#374151" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-square-pen cursor-pointer">
+                                    <path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+                                    <path
+                                        d="M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    fill="none" stroke="#EF4444" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-trash cursor-pointer">
+                                    <path d="M10 11v6" />
+                                    <path d="M14 11v6" />
+                                    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6" />
+                                    <path d="M3 6h18" />
+                                    <path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="flex justify-between">
+                            <div class="flex items-center gap-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="#8B5CF6" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-shopping-cart">
+                                    <path
+                                        d="m2.05 2.05 1.099-.028a1 1 0 0 1 1.008.815l2.69 14.347A1 1 0 0 0 7.83 18H18" />
+                                    <path
+                                        d="M4.563 5h16.435a1 1 0 0 1 .981 1.204l-1.026 6.226A2 2 0 0 1 18.962 14H6.25" />
+                                    <circle cx="18" cy="20" r="2" />
+                                    <circle cx="8" cy="20" r="2" />
+                                </svg>
+                                <p class="">Shopping</p>
+                            </div>
+                            <div class="flex items-center gap-3.5">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    fill="none" stroke="#374151" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-square-pen cursor-pointer">
+                                    <path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+                                    <path
+                                        d="M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    fill="none" stroke="#EF4444" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-trash cursor-pointer">
+                                    <path d="M10 11v6" />
+                                    <path d="M14 11v6" />
+                                    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6" />
+                                    <path d="M3 6h18" />
+                                    <path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="flex justify-between">
+                            <div class="flex items-center gap-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="#F97316" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-receipt-text">
+                                    <path d="M13 16H8" />
+                                    <path d="M14 8H8" />
+                                    <path d="M16 12H8" />
+                                    <path
+                                        d="M4 3a1 1 0 0 1 1-1 1.3 1.3 0 0 1 .7.2l.933.6a1.3 1.3 0 0 0 1.4 0l.934-.6a1.3 1.3 0 0 1 1.4 0l.933.6a1.3 1.3 0 0 0 1.4 0l.933-.6a1.3 1.3 0 0 1 1.4 0l.934.6a1.3 1.3 0 0 0 1.4 0l.933-.6A1.3 1.3 0 0 1 19 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1 1.3 1.3 0 0 1-.7-.2l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.934.6a1.3 1.3 0 0 1-1.4 0l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-1.4 0l-.934-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-.7.2 1 1 0 0 1-1-1z" />
+                                </svg>
+                                <p class="">Bills</p>
+                            </div>
+                            <div class="flex items-center gap-3.5">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    fill="none" stroke="#374151" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-square-pen cursor-pointer">
+                                    <path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+                                    <path
+                                        d="M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    fill="none" stroke="#EF4444" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-trash cursor-pointer">
+                                    <path d="M10 11v6" />
+                                    <path d="M14 11v6" />
+                                    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6" />
+                                    <path d="M3 6h18" />
+                                    <path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="flex justify-between">
+                            <div class="flex items-center gap-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="#F97316" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-clapperboard">
+                                    <path d="m12.296 3.464 3.02 3.956" />
+                                    <path d="M20.2 6 3 11l-.9-2.4c-.3-1.1.3-2.2 1.3-2.5l13.5-4c1.1-.3 2.2.3 2.5 1.3z" />
+                                    <path d="M3 11h18v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                                    <path d="m6.18 5.276 3.1 3.899" />
+                                </svg>
+                                <p class="">Entertainment</p>
+                            </div>
+                            <div class="flex items-center gap-3.5">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    fill="none" stroke="#374151" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-square-pen cursor-pointer">
+                                    <path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+                                    <path
+                                        d="M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    fill="none" stroke="#EF4444" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-trash cursor-pointer">
+                                    <path d="M10 11v6" />
+                                    <path d="M14 11v6" />
+                                    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6" />
+                                    <path d="M3 6h18" />
+                                    <path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="flex justify-between">
+                            <div class="flex items-center gap-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="#059669" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-banknote-arrow-up">
+                                    <path d="M12 18H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5" />
+                                    <path d="M18 12h.01" />
+                                    <path d="M19 22v-6" />
+                                    <path d="m22 19-3-3-3 3" />
+                                    <path d="M6 12h.01" />
+                                    <circle cx="12" cy="12" r="2" />
+                                </svg>
+                                <p class="">Salary</p>
+                            </div>
+                            <div class="flex items-center gap-3.5">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    fill="none" stroke="#374151" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-square-pen cursor-pointer">
+                                    <path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+                                    <path
+                                        d="M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                    fill="none" stroke="#EF4444" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-trash cursor-pointer">
+                                    <path d="M10 11v6" />
+                                    <path d="M14 11v6" />
+                                    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6" />
+                                    <path d="M3 6h18" />
+                                    <path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </section>
+    </main>
+
+
+    <script src="../JS/settings.js"></script>
+</body>
+
+</html>

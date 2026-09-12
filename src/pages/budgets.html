@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Budgets</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/output.css">
+</head>
+
+<body class="bg-[#F6F7FB] md:flex ">
+    <!-- mobile logo section -->
+    <section
+        class="md:hidden sticky top-0 z-50 bg-white flex justify-between border-b border-[#E5E7EB] items-center px-2 py-2">
+        <div id="menuButtons">
+            <!-- menu open -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" id="menuOpen" data-action="menu-open" height="20"
+                fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+            </svg>
+            <!-- menu close -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" id="menuClose" data-action="menu-close"
+                fill="currentColor" class="bi bi-x-lg hidden" viewBox="0 0 16 16">
+                <path
+                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+            </svg>
+        </div>
+        <h1 class="poppins font-bold text-xl/[24px] text-indigo-600">Budgets</h1>
+        <div class="bg-white p-1 border-[#E5E7EB] border rounded-lg">
+            <div class="relative p-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bell"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4 4 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4 4 0 0 0-3.203-3.92zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5 5 0 0 1 13 6c0 .88.32 4.2 1.22 6" />
+                </svg>
+                <div class="w-2 h-2 rounded-full bg-[#EF4444] absolute top-0 right-0"></div>
+            </div>
+        </div>
+    </section>
+    <!-- Sidebar -->
+    <aside
+        class="lg:w-64 w-full md:fixed md:w-fit md:h-dvh flex flex-col justify-between items-center bg-white border border-[#E5E7EB] rounded-md">
+        <section>
+            <!-- logo section desktop -->
+            <section class="md:flex hidden items-center p-6 gap-2 text-indigo-600 border-b border-[#E5E7EB]">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M14 2.5 C14.4 2.5 14.8 2.65 15.1 2.95 L25.05 12.9 C25.65 13.5 25.65 14.5 25.05 15.1 L15.1 25.05 C14.5 25.65 13.5 25.65 12.9 25.05 L2.95 15.1 C2.35 14.5 2.35 13.5 2.95 12.9 L12.9 2.95 C13.2 2.65 13.6 2.5 14 2.5Z"
+                        stroke="currentcolor" stroke-width="4" stroke-linejoin="round" />
+                </svg>
+                <h1 class="md:hidden lg:block poppins font-bold text-2xl/tight">Spendly</h1>
+            </section>
+
+            <!-- navigation -->
+            <nav class="hidden bg-white md:block mt-32 md:w-fit lg:w-full" id="navigationList">
+                <div class="md:px-6 md:mt-8 space-y-2">
+                    <a href="/index.html"
+                        class="flex px-3 gap-3 items-center w-full h-11 active:bg-indigo-100 hover:bg-[#F3F4F6] rounded-md hover:text-[#374151] transition-all font-medium text-[#6B7280] active:text-indigo-600 active:font-semibold">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" stroke-width="0.5"
+                            stroke="currentcolor" fill="currentcolor" class="bi bi-house" viewBox="0 0 16 16">
+                            <path
+                                d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
+                        </svg>
+                        <span class="poppins md:hidden lg:block">Dashboard</span>
+                    </a>
+                    <a href="./transactions.html"
+                        class="flex px-3 gap-3 items-center w-full h-11 active:bg-indigo-100 hover:bg-[#F3F4F6] rounded-md hover:text-[#374151] font-medium transition-all text-[#6B7280] active:text-indigo-600 active:font-semibold">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentcolor"
+                            stroke-width="0.5" stroke="currentcolor" class="bi bi-currency-dollar" viewBox="0 0 16 16">
+                            <path
+                                d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73z" />
+                        </svg>
+                        <span class="poppins md:hidden lg:block">Transactions</span>
+                    </a>
+                    <a href="./budgets.html"
+                        class="flex px-3 gap-3 items-center w-full h-11 bg-indigo-100 hover:bg-[#F3F4F6] rounded-md hover:text-[#374151] transition-all text-indigo-600 font-semibold">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentcolor"
+                            stroke-width="0.5" stroke="currentcolor" class="bi bi-wallet" viewBox="0 0 16 16">
+                            <path
+                                d="M0 3a2 2 0 0 1 2-2h13.5a.5.5 0 0 1 0 1H15v2a1 1 0 0 1 1 1v8.5a1.5 1.5 0 0 1-1.5 1.5h-12A2.5 2.5 0 0 1 0 12.5zm1 1.732V12.5A1.5 1.5 0 0 0 2.5 14h12a.5.5 0 0 0 .5-.5V5H2a2 2 0 0 1-1-.268M1 3a1 1 0 0 0 1 1h12V2H2a1 1 0 0 0-1 1" />
+                        </svg>
+                        <span class="poppins md:hidden lg:block">Budgets</span>
+                    </a>
+                    <a href="./analytics.html"
+                        class="flex px-3 gap-3 items-center w-full h-11 active:bg-indigo-100 rounded-md hover:bg-[#F3F4F6] hover:text-[#374151] font-medium transition-all text-[#6B7280] active:text-indigo-600 active:font-semibold">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentcolor"
+                            stroke-width="0.5" stroke="currentcolor" class="bi bi-graph-up-arrow" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M0 0h1v15h15v1H0zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5" />
+                        </svg>
+                        <span class="poppins md:hidden lg:block">Analytics</span>
+                    </a>
+                    <a href="./settings.html"
+                        class="flex px-3 gap-3 items-center w-full h-11 rounded-md active:bg-indigo-100 hover:bg-[#F3F4F6] hover:text-[#374151] font-medium transition-all text-[#6B7280] active:text-indigo-600 active:font-semibold">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentcolor"
+                            stroke-width="0.5" stroke="currentcolor" class="bi bi-gear" viewBox="0 0 16 16">
+                            <path
+                                d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0" />
+                            <path
+                                d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z" />
+                        </svg>
+                        <span class="poppins  md:hidden lg:block">Settings</span>
+                    </a>
+                </div>
+            </nav>
+        </section>
+        <!-- profile section -->
+        <section id="profileCard" class="p-2 md:block w-full hidden">
+            <div class="border border-[#E5E7EB] rounded-md">
+                <div class="p-4 flex gap-2 items-center">
+                    <div class="w-14 h-14 rounded-full ">
+                        <img src="../images/profile avatar 2.avif"
+                            class="w-full h-full overflow-hidden object-cover object-center" alt="">
+                    </div>
+                    <div class="md:hidden lg:block">
+                        <span class="poppins font-semibold text-[#111827]">Surya</span>
+                        <p class="text-sm text-[#6B7280]">Frontend Developer</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </aside>
+    <!-- budgets form -->
+    <section class="flex-1 py-3 md:pt-10 md:px-5 px-2.5 hidden poppins md:ms-28 lg:ms-64" id="budgets-input">
+        <header>
+            <div class="text-center md:text-start">
+                <h1 class="text-2xl font-semibold text-[#111827]">Create New Budget</h1>
+                <p class="text-[#6B7280] text-sm">Fill in the details below to add a new budget.</p>
+            </div>
+        </header>
+        <form action="" class="bg-white border border-[#E5E7EB] rounded-xl p-6 w-full max-w-[720px] my-4 space-y-2">
+            <div>
+                <label for="budget-name" class="transaction-label">Budget Name</label>
+                <input placeholder="e.g. Food Budget" type="text" id="budget-name" class="transaction-input">
+            </div>
+            <div class="md:flex gap-4 space-y-2 md:space-y-0 items-center">
+                <div class="flex-1">
+                    <label for="budget-amount" class="transaction-label">Budget Amount</label>
+                    <input type="number" id="budget-amount" class="transaction-input" placeholder="e.g. 8000">
+                </div>
+                <div class="flex-1">
+                    <label for="start-date" class="transaction-label">Start Date</label>
+                    <input type="date" id="start-date" class="transaction-input">
+                </div>
+            </div>
+            <div class="md:flex gap-4 items-center space-y-2 md:space-y-0">
+                <div class="flex-1">
+                    <label for="period" class="transaction-label">Period</label>
+                    <select name="" id="period" class="transaction-input">
+                        <option value="select category">select category</option>
+                        <option value="income">Monthly</option>
+                        <option value="expense">Weekly</option>
+                        <option value="savings">Daily</option>
+                    </select>
+                </div>
+                <div class="flex-1">
+                    <label for="budget-category" class="transaction-label">Category</label>
+                    <select name="" id="budget-category" class="transaction-input">
+                        <option value="select category">select category</option>
+                        <option value="food">Food</option>
+                        <option value="salary">Salary</option>
+                        <option value="groceries">Groceries</option>
+                        <option value="transportation">Transportation</option>
+                        <option value="shopping">Shopping</option>
+                        <option value="bills">Bills</option>
+                        <option value="entertainment">Entertainment</option>
+                        <option value="health & medical">Health & Medical</option>
+                        <option value="education">Education</option>
+                        <option value="personal care">Personal Care</option>
+                        <option value="travel">Travel</option>
+                        <option value="subscriptions">Subscriptions</option>
+                        <option value="rent & housing">Rent & Housing</option>
+                        <option value="gifts & donations">Gifts & Donations</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <label for="budget-description" class="transaction-label">Description / Notes
+                    (Optional)</label>
+                <textarea name="" id="budget-description" class=""></textarea>
+            </div>
+            <div class="flex items-center gap-3 justify-end">
+                <button
+                    class="h-11 px-4 hover:bg-[#F9FAFB] border border-[#E5E7EB] rounded-lg text-sm font-medium text-[#374151]"
+                    id="cancel-budget">Cancel</button>
+                <button
+                    class="h-11 px-4 bg-[#4F46E5] hover:bg-[#4338CA] rounded-lg text-white text-sm font-medium">Create
+                    Budget</button>
+            </div>
+        </form>
+    </section>
+    <main class="md:ms-28 lg:ms-64 flex-1 py-3 md:py-10 md:px-5 px-2.5 poppins space-y-6" id="budgets-page">
+
+        <header class="flex justify-between items-center">
+            <div class="hidden md:block">
+                <h1 class="inter text-2xl font-bold text-[#111827]">Budgets</h1>
+                <p class="inter text-sm text-[#6B7280]">Manage your budgets and track your spending limits</p>
+            </div>
+            <button
+                class="h-11 px-4 bg-[#4F46E5] inter justify-center md:justify-start hover:bg-[#4338CA] rounded-lg cursor-pointer text-white text-sm font-medium flex gap-2 items-center w-full md:w-fit"
+                id="add-budget"><span><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="white"
+                        class="bi bi-plus-lg" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2" />
+                    </svg></span>New budget</button>
+        </header>
+        <!-- cards -->
+        <section class="mt-3 md:mt-6 flex overflow-x-auto snap-x snap-mandatory md:flex-wrap gap-5 justify-between">
+            <div
+                class="p-5 bg-white border md:w-[calc(50%-20px)] lg:flex-1 snap-start  w-full shrink-0 border-[#E5E7EB] rounded-xl poppins">
+                <div class="p-3 bg-indigo-100 w-fit h-fit rounded-md">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#4F46E5" class="bi bi-wallet2"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M12.136.326A1.5 1.5 0 0 1 14 1.78V3h.5A1.5 1.5 0 0 1 16 4.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 13.5v-9a1.5 1.5 0 0 1 1.432-1.499zM5.562 3H13V1.78a.5.5 0 0 0-.621-.484zM1.5 4a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5z" />
+                    </svg>
+                </div>
+                <div class="mt-3 mb-1">
+                    <h1 class="font-medium text-sm text-[#6B7280]">Total Budget</h1>
+                    <span class="text-2xl font-semibold text-[#111827]">₹ 35,000</span>
+                </div>
+                <p class="text-sm text-[#6B7280]">This month</p>
+            </div>
+            <div
+                class="p-5 bg-white border md:w-[calc(50%-20px)] lg:flex-1 snap-start  w-full shrink-0 border-[#E5E7EB] rounded-xl poppins">
+                <div class="p-3 bg-green-100 w-fit h-fit rounded-md">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#DCFCE7" stroke="#16A34A"
+                        class="bi bi-cash-coin" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M11 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8m5-4a5 5 0 1 1-10 0 5 5 0 0 1 10 0" />
+                        <path
+                            d="M9.438 11.944c.047.596.518 1.06 1.363 1.116v.44h.375v-.443c.875-.061 1.386-.529 1.386-1.207 0-.618-.39-.936-1.09-1.1l-.296-.07v-1.2c.376.043.614.248.671.532h.658c-.047-.575-.54-1.024-1.329-1.073V8.5h-.375v.45c-.747.073-1.255.522-1.255 1.158 0 .562.378.92 1.007 1.066l.248.061v1.272c-.384-.058-.639-.27-.696-.563h-.668zm1.36-1.354c-.369-.085-.569-.26-.569-.522 0-.294.216-.514.572-.578v1.1zm.432.746c.449.104.655.272.655.569 0 .339-.257.571-.709.614v-1.195z" />
+                        <path
+                            d="M1 0a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h4.083q.088-.517.258-1H3a2 2 0 0 0-2-2V3a2 2 0 0 0 2-2h10a2 2 0 0 0 2 2v3.528c.38.34.717.728 1 1.154V1a1 1 0 0 0-1-1z" />
+                        <path d="M9.998 5.083 10 5a2 2 0 1 0-3.132 1.65 6 6 0 0 1 3.13-1.567" />
+                    </svg>
+                </div>
+                <div class="mt-3 mb-1">
+                    <h1 class="font-medium text-sm text-[#6B7280]">Total Spent</h1>
+                    <span class="text-2xl font-semibold text-[#111827]">₹ 22,450</span>
+                </div>
+                <p class="text-sm text-[#6B7280]">This month</p>
+            </div>
+            <div
+                class="p-5 bg-white border md:w-[calc(50%-20px)] lg:flex-1 snap-start  w-full shrink-0 border-[#E5E7EB] rounded-xl poppins">
+                <div class="p-3 bg-red-100 w-fit h-fit rounded-md">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#F59E0B"
+                        class="bi bi-currency-rupee" viewBox="0 0 16 16">
+                        <path
+                            d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4z" />
+                    </svg>
+                </div>
+                <div class="mt-3 mb-1">
+                    <h1 class="font-medium text-sm text-[#6B7280]">Remaining</h1>
+                    <span class="text-2xl font-semibold text-[#111827]">₹ 12,550</span>
+                </div>
+                <p class="text-sm text-[#6B7280]">This month</p>
+            </div>
+            <div
+                class="p-5 bg-white border md:w-[calc(50%-20px)] lg:flex-1 snap-start  w-full shrink-0 border-[#E5E7EB] rounded-xl poppins">
+                <div class="p-3 bg-[#EEF2FF] w-fit h-fit rounded-md">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#4F46E5"
+                        class="bi bi-bar-chart" viewBox="0 0 16 16">
+                        <path
+                            d="M4 11H2v3h2zm5-4H7v7h2zm5-5v12h-2V2zm-2-1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM6 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1zm-5 4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1z" />
+                    </svg>
+                </div>
+                <div class="mt-3 mb-1">
+                    <h1 class="font-medium text-sm text-[#6B7280]">Overall Progress</h1>
+                    <span class="text-2xl font-semibold text-[#111827]">64%</span>
+                </div>
+                <p class="text-sm text-[#6B7280]">of total budget</p>
+            </div>
+        </section>
+        <!-- Budget Overview -->
+        <section>
+            <h1 class="font-semibold text-[#111827] leading-6">Budget Overview</h1>
+            <div class="bg-white border border-[#E5E7EB] rounded-xl p-4 mt-3">
+                <div class="min-h-14 border-b p-2 border-[#F3F4F6] flex gap-5 items-center justify-between">
+                    <div class="flex gap-5 items-center">
+                        <div class="bg-indigo-100 md:p-3 p-1.5 rounded-md">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#4F46E5"
+                                class="bi bi-fork-knife" viewBox="0 0 16 16">
+                                <path
+                                    d="M13 .5c0-.276-.226-.506-.498-.465-1.703.257-2.94 2.012-3 8.462a.5.5 0 0 0 .498.5c.56.01 1 .13 1 1.003v5.5a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5zM4.25 0a.25.25 0 0 1 .25.25v5.122a.128.128 0 0 0 .256.006l.233-5.14A.25.25 0 0 1 5.24 0h.522a.25.25 0 0 1 .25.238l.233 5.14a.128.128 0 0 0 .256-.006V.25A.25.25 0 0 1 6.75 0h.29a.5.5 0 0 1 .498.458l.423 5.07a1.69 1.69 0 0 1-1.059 1.711l-.053.022a.92.92 0 0 0-.58.884L6.47 15a.971.971 0 1 1-1.942 0l.202-6.855a.92.92 0 0 0-.58-.884l-.053-.022a1.69 1.69 0 0 1-1.059-1.712L3.462.458A.5.5 0 0 1 3.96 0z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h2 class="inter font-medium text-[#111827] text-sm">Food</h2>
+                            <p class="inter text-xs font-medium text-[#6B7280]">₹4,800 / ₹8,000</p>
+                            <div class="max-w-56 mt-1 h-2 bg-[#E5E7EB] rounded-full">
+                                <div class="w-[60%] h-full bg-[#4F46E5] rounded-full"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="inter text-xs font-medium text-[#6B7280]">60%</p>
+                </div>
+                <div class="min-h-14 p-2 flex gap-5 items-center justify-between">
+                    <div class="flex gap-5 items-center">
+                        <div class="bg-indigo-100 md:p-3 p-1.5 rounded-md">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#4F46E5"
+                                class="bi bi-fork-knife" viewBox="0 0 16 16">
+                                <path
+                                    d="M13 .5c0-.276-.226-.506-.498-.465-1.703.257-2.94 2.012-3 8.462a.5.5 0 0 0 .498.5c.56.01 1 .13 1 1.003v5.5a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5zM4.25 0a.25.25 0 0 1 .25.25v5.122a.128.128 0 0 0 .256.006l.233-5.14A.25.25 0 0 1 5.24 0h.522a.25.25 0 0 1 .25.238l.233 5.14a.128.128 0 0 0 .256-.006V.25A.25.25 0 0 1 6.75 0h.29a.5.5 0 0 1 .498.458l.423 5.07a1.69 1.69 0 0 1-1.059 1.711l-.053.022a.92.92 0 0 0-.58.884L6.47 15a.971.971 0 1 1-1.942 0l.202-6.855a.92.92 0 0 0-.58-.884l-.053-.022a1.69 1.69 0 0 1-1.059-1.712L3.462.458A.5.5 0 0 1 3.96 0z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h2 class="inter font-medium text-[#111827] text-sm">Food</h2>
+                            <p class="inter text-xs font-medium text-[#6B7280]">₹4,800 / ₹8,000</p>
+                            <div class="max-w-56 mt-1 h-2 bg-[#E5E7EB] rounded-full">
+                                <div class="w-[60%] h-full bg-[#4F46E5] rounded-full"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="inter text-xs font-medium text-[#6B7280]">60%</p>
+                </div>
+            </div>
+        </section>
+        <!-- spending overview chart -->
+        <section class="md:flex gap-5 space-y-6 md:space-y-0">
+            <div class="bg-white border border-[#E5E7EB] rounded-xl p-5 flex-1 h-full">
+                <h1 class="inter font-semibold text-[#111827] mb-5">Spending by Category</h1>
+                <div class="h-64">
+                    <canvas id="spendingChart" class="w-full h-full"></canvas>
+                </div>
+            </div>
+            <div class="bg-white border border-[#E5E7EB] rounded-xl p-5 flex-1 h-full">
+                <div class="flex justify-between">
+                    <h1 class="inter font-semibold text-[#111827] mb-5">Budget Trend</h1>
+                    <select name="" id=""
+                        class="h-9 bg-white border border-[#E5E7EB] rounded-lg px-3 inter text-xs font-medium text-[#4B5563]">
+                        <option value="this month">This month</option>
+                    </select>
+                </div>
+                <div class="h-64">
+                    <canvas id="budgetTrend" class="w-full h-full"></canvas>
+                </div>
+            </div>
+        </section>
+        <!-- Savings Goals -->
+        <section>
+            <div class="bg-white border border-[#E5E7EB] rounded-xl p-4">
+                <h1 class="inter font-semibold text-[#111827] mb-3">Savings Goals</h1>
+                <div class="flex gap-10">
+                    <div class="flex gap-10">
+                        <div class="bg-indigo-100 md:p-3 p-1.5 rounded-md">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#4F46E5"
+                                class="bi bi-fork-knife" viewBox="0 0 16 16">
+                                <path
+                                    d="M13 .5c0-.276-.226-.506-.498-.465-1.703.257-2.94 2.012-3 8.462a.5.5 0 0 0 .498.5c.56.01 1 .13 1 1.003v5.5a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5zM4.25 0a.25.25 0 0 1 .25.25v5.122a.128.128 0 0 0 .256.006l.233-5.14A.25.25 0 0 1 5.24 0h.522a.25.25 0 0 1 .25.238l.233 5.14a.128.128 0 0 0 .256-.006V.25A.25.25 0 0 1 6.75 0h.29a.5.5 0 0 1 .498.458l.423 5.07a1.69 1.69 0 0 1-1.059 1.711l-.053.022a.92.92 0 0 0-.58.884L6.47 15a.971.971 0 1 1-1.942 0l.202-6.855a.92.92 0 0 0-.58-.884l-.053-.022a1.69 1.69 0 0 1-1.059-1.712L3.462.458A.5.5 0 0 1 3.96 0z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h2 class="inter text-sm font-medium text-[#111827]">Emergency Fund</h2>
+                            <p class="inter text-xs text-[#6B7280] mt-0.5">₹36,000 / ₹50,000</p>
+                            <div class="max-w-56 mt-1 h-2 bg-[#E5E7EB] rounded-full">
+                                <div class="w-[60%] h-full bg-[#4F46E5] rounded-full"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>72%</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../JS/budgets.js"></script>
+</body>
+
+</html>
