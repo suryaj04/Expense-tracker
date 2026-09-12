@@ -46,3 +46,19 @@ textarea {
     outline: none;
     color: #111827;
   }
+
+  @layer components {
+  .page-title {
+    font-family: "Inter", sans-serif;
+    @apply text-2xl font-bold leading-8 text-[#111827];
+  }
+
+  .page-subtitle {
+    font-family: "Inter", sans-serif;
+    @apply text-sm font-normal leading-5 text-[#6B7280];
+  }
+
+  .card {
+    @apply w-full bg-white border border-[#E5E7EB] rounded-xl p-4;
+  }
+}
